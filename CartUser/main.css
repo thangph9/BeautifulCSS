@@ -1,0 +1,99 @@
+body,html{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: 150px auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap
+}
+.item{
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.card{
+    height: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.5s;
+    position: relative;
+}
+.content{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    padding:40px;
+    color:#ddd;
+    box-sizing: border-box
+}
+ul{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    list-style: none;
+    padding: 10px;
+}
+ul li a i{
+    color:#ddd;
+    font-size: 25px;
+}
+ul li:nth-child(1) a i{
+    color:#3b5999
+}
+ul li:nth-child(2) a i{
+    color:#dd4b39
+}
+ul li:nth-child(3) a i{
+    color:#55acee
+}
+ul li:nth-child(4) a i{
+    color:#e4405f
+}
+ul li:nth-child(5) a i{
+    color:#0077B5
+}
+.item:nth-child(1) .card{
+    position: relative;
+    background-image: url(Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1366x768.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.item:nth-child(1) .card::before{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    background-image: linear-gradient(0deg,#c21833,transparent);
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.item:nth-child(1):hover .card::before{
+    content: "";
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.item:nth-child(2) .card{
+    background-image: url(Harry_Potter_Castles_Fantastic_world_Hogwarts_516177_1366x768.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+.item:nth-child(3) .card{
+    background-image: url(lunar_dew_forest_by_jambi20-d6p71ld.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat
+}
