@@ -22,16 +22,18 @@ body,html{
     height: 600px;
     border-radius: 15px;
     overflow: hidden;
-    transition: all 0.5s;
     position: relative;
+    transition: all 1s;
 }
 .content{
     position: absolute;
-    bottom: 0px;
+    bottom: -100%;
     text-align: center;
     padding:40px;
     color:#ddd;
-    box-sizing: border-box
+    box-sizing: border-box;
+    transition: bottom 1s
+
 }
 ul{
     margin: 0px;
@@ -47,21 +49,6 @@ ul li a i{
     color:#ddd;
     font-size: 25px;
 }
-ul li:nth-child(1) a i{
-    color:#3b5999
-}
-ul li:nth-child(2) a i{
-    color:#dd4b39
-}
-ul li:nth-child(3) a i{
-    color:#55acee
-}
-ul li:nth-child(4) a i{
-    color:#e4405f
-}
-ul li:nth-child(5) a i{
-    color:#0077B5
-}
 .item:nth-child(1) .card{
     position: relative;
     background-image: url(Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1366x768.jpg);
@@ -73,17 +60,20 @@ ul li:nth-child(5) a i{
     content: "";
     position: absolute;
     opacity: 0;
-    background-image: linear-gradient(0deg,#c21833,transparent);
+    background-image: linear-gradient(to top,#c21833,transparent);
     width: 100%;
     height: 100%;
     transition: all 1s;
 }
 .item:nth-child(1):hover .card::before{
-    content: "";
     opacity: 0.6;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+}
+.item:nth-child(1):hover .card{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 20px rgba(0,0,0,.2)
+}
+.item:nth-child(1):hover .content{
+    bottom: 0px;
 }
 .item:nth-child(2) .card{
     background-image: url(Harry_Potter_Castles_Fantastic_world_Hogwarts_516177_1366x768.jpg);
@@ -91,9 +81,47 @@ ul li:nth-child(5) a i{
     background-size: cover;
     background-repeat: no-repeat
 }
+.item:nth-child(2) .card::before{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    background-image: linear-gradient(to top,#3498db,transparent);
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.item:nth-child(2):hover .card::before{
+    opacity: 0.6;
+}
+.item:nth-child(2):hover .content{
+    bottom: 0px;
+}
+.item:nth-child(2):hover .card{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 20px rgba(0,0,0,.2)
+}
 .item:nth-child(3) .card{
     background-image: url(lunar_dew_forest_by_jambi20-d6p71ld.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat
+}
+.item:nth-child(3) .card::before{
+    content: "";
+    position: absolute;
+    opacity: 0;
+    background-image: linear-gradient(to top,#9b59b6,transparent);
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.item:nth-child(3):hover .card::before{
+    opacity: 0.6;
+}
+.item:nth-child(3):hover .content{
+    bottom: 0px;
+}
+.item:nth-child(3):hover .card{
+    transform: translateY(-20px);
+    box-shadow: 0 20px 20px rgba(0,0,0,.2)
 }
